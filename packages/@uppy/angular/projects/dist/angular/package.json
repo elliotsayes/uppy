@@ -1,0 +1,57 @@
+{
+  "name": "@uppy/angular",
+  "description": "Angular component wrappers around Uppy's official UI plugins.",
+  "version": "0.5.1",
+  "license": "MIT",
+  "homepage": "https://uppy.io",
+  "keywords": [
+    "file uploader",
+    "uppy",
+    "uppy-plugin",
+    "angular",
+    "angular-components"
+  ],
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">= 14",
+    "@angular/core": ">= 14",
+    "@uppy/core": "workspace:^",
+    "@uppy/dashboard": "workspace:^",
+    "@uppy/drag-drop": "workspace:^",
+    "@uppy/progress-bar": "workspace:^",
+    "@uppy/status-bar": "workspace:^",
+    "@uppy/utils": "workspace:^"
+  },
+  "module": "fesm2015/uppy-angular.mjs",
+  "es2020": "fesm2020/uppy-angular.mjs",
+  "esm2020": "esm2020/uppy-angular.mjs",
+  "fesm2020": "fesm2020/uppy-angular.mjs",
+  "fesm2015": "fesm2015/uppy-angular.mjs",
+  "typings": "uppy-angular.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./uppy-angular.d.ts",
+      "esm2020": "./esm2020/uppy-angular.mjs",
+      "es2020": "./fesm2020/uppy-angular.mjs",
+      "es2015": "./fesm2015/uppy-angular.mjs",
+      "node": "./fesm2015/uppy-angular.mjs",
+      "default": "./fesm2020/uppy-angular.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build @uppy/angular --configuration development",
+    "build:release": "ng build",
+    "build-storybook": "npm run docs:json && build-storybook",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+    "storybook": "npm run docs:json && start-storybook -p 6006",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": ">= 14",
+    "@angular/common": ">= 14",
+    "@angular/compiler": ">= 14",
+    "@angular/core": ">= 14",
+    "@angular/forms": ">= 14",
+    "@angular/platform-browser": ">= 14",
+    "@angular/platform-browser-dynamic": ">= 14",
+    "@angular/router": ">= 14",
+    "@uppy/dashboard": "workspace:^",
+    "@uppy/drag-drop": "workspace:^",
+    "@uppy/progress-bar": "workspace:^",
+    "@uppy/status-bar": "workspace:^",
+    "prop-types": "^15.7.2",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "peerDependencies": {
+    "@uppy/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": ">= 14",
+    "@angular/cli": ">= 14",
+    "@angular/compiler-cli": ">= 14",
+    "@babel/core": "^7.17.5",
+    "@compodoc/compodoc": "^1.1.19",
+    "@storybook/addon-actions": "^6.5.0-alpha.42",
+    "@storybook/addon-essentials": "^6.5.0-alpha.42",
+    "@storybook/addon-interactions": "^6.5.0-alpha.42",
+    "@storybook/addon-links": "^6.5.0-alpha.42",
+    "@storybook/angular": "^6.5.0-alpha.42",
+    "@storybook/builder-webpack5": "^6.5.0-alpha.42",
+    "@storybook/manager-webpack5": "^6.5.0-alpha.42",
+    "@storybook/testing-library": "^0.0.9",
+    "@types/jasmine": "~4.0.0",
+    "babel-loader": "^8.2.3",
+    "jasmine-core": "~4.2.0",
+    "karma": "~6.4.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^13.0.0",
+    "typescript": "~4.8"
+  }
+}
